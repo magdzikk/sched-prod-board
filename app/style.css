@@ -3,7 +3,7 @@ header, main, footer { padding: 12px 24px; }
 h1 { margin: 0; font-size: 22px; }
 .sub { margin: 2px 0 0; color: #666; }
 .list { list-style: none; margin: 0; padding: 0; max-width: 960px; }
-.row { display: grid; grid-template-columns: 90px 50px 1fr 210px 64px; gap: 12px; align-items: center; min-height: 44px; padding: 0 12px; border-bottom: 1px solid #e5e5e5; background: #fff; }
+.row { display: grid; grid-template-columns: 90px 50px 1fr 210px 64px; cursor: pointer; gap: 12px; align-items: center; min-height: 44px; padding: 0 12px; border-bottom: 1px solid #e5e5e5; background: #fff; }
 .row .id { font-family: ui-monospace, monospace; }
 .row.sev1 .sev { color: #b00020; font-weight: 600; }
 .row.sev2 .sev { color: #a15c00; }
@@ -13,4 +13,16 @@ footer { color: #777; font-size: 13px; }
 .loader::before { content: ''; display: inline-block; width: 12px; height: 12px; margin-right: 8px; border: 2px solid #bbb; border-top-color: #333; border-radius: 50%; animation: spin 0.8s linear infinite; vertical-align: -2px; }
 @keyframes spin { to { transform: rotate(360deg); } }
 .row .ack { padding: 4px 12px; font: inherit; cursor: pointer; }
-.row .acked { color: #1b7f3b; font-weight: 600; }
+.row .acked, .panel .acked { color: #1b7f3b; font-weight: 600; }
+.row:hover { background: #f4f6fb; }
+.row.selected { background: #e8eefc; box-shadow: inset 3px 0 0 #3056d3; }
+.row:focus-visible { outline: 2px solid #3056d3; outline-offset: -2px; }
+.panel { position: fixed; top: 92px; left: 1000px; width: 256px; box-sizing: border-box; padding: 16px; background: #fff; border: 1px solid #d8d8d8; border-radius: 6px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06); }
+.panel h2 { margin: 0 0 8px; font: 600 18px ui-monospace, monospace; }
+.panel dl { display: grid; grid-template-columns: auto 1fr; gap: 4px 10px; margin: 0 0 14px; font-size: 14px; }
+.panel dt { color: #777; }
+.panel dd { margin: 0; }
+.panel .ack { width: 100%; padding: 8px 12px; font-size: 15px; }
+@media (max-width: 1279px) {
+  .panel { position: static; width: auto; max-width: 960px; margin-top: 12px; box-sizing: border-box; }
+}
