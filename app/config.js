@@ -1,3 +1,3 @@
 // Where the board reads from. Fill both from what start-challenge gave you.
-export const API = 'https://<course origin>/challenges/show-me-when/api';
-export const SESSION = '<session from start-challenge>';
+export const API = 'https://hq.mega.dev/challenges/show-me-when/api';
+export const SESSION = 'v1.eyJzZWVkIjoiYmZmMDhiNGRmYzYwIiwic3ViIjoiNDkwNSIsImF1ZCI6InNlc3Npb246c2hvdy1tZS13aGVuIiwiaWF0IjoxNzk1MDkzODQ2LCJleHAiOjE3OTU2OTg2NDZ9.K83dasTPu6vVvxfFZ_A1iPA2HpJnPUSdiSoLJfboddo';
